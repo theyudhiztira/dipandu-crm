@@ -96,7 +96,7 @@ class Home extends Component{
                                     <h5>Account Details</h5>
                                 </div>
                                 <div className='form-row'>
-                                    <div className='form-group col-6 floating-label'>
+                                    <div className='form-group col-12 col-md-6 floating-label'>
                                         <label>Full Name</label>
                                         <input
                                         type='text'
@@ -107,7 +107,7 @@ class Home extends Component{
                                         onChange={(e) => this.handleChange(e)}
                                         />
                                     </div>
-                                    <div className='form-group col-6 floating-label'>
+                                    <div className='form-group col-12 col-md-6 floating-label'>
                                         <label>Email</label>
                                         <input
                                         type='email'
@@ -120,7 +120,7 @@ class Home extends Component{
                                     </div>
                                 </div>
                                 <div className='form-row m-b-15'>
-                                    <div className='form-group col-6 floating-label'>
+                                    <div className='form-group col-12 col-md-6 floating-label'>
                                         <label>Password</label>
                                         <input
                                         type='password'
@@ -131,7 +131,7 @@ class Home extends Component{
                                         onChange={(e) => this.handleChange(e)}
                                         />
                                     </div>
-                                    <div className='form-group col-6 floating-label'>
+                                    <div className='form-group col-12 col-md-6 floating-label'>
                                         <label>Password Confirmation</label>
                                         <input
                                         type='password'
@@ -148,7 +148,7 @@ class Home extends Component{
                                     <h5>Company Info</h5>
                                 </div>
                                 <div className='form-row'>
-                                    <div className='form-group col-6 floating-label'>
+                                    <div className='form-group col-12 col-md-6 floating-label'>
                                         <label>Company Name</label>
                                         <input
                                         type='text'
@@ -159,7 +159,7 @@ class Home extends Component{
                                         onChange={(e) => this.handleChange(e)}
                                         />
                                     </div>
-                                    <div className='form-group col-6 floating-label'>
+                                    <div className='form-group col-12 col-md-6 floating-label'>
                                         <label>Company Website</label>
                                         <input
                                         type='text'
