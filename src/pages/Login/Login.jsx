@@ -55,7 +55,6 @@ class Home extends Component{
     }
 
     render(){
-        console.log(this.props)
         return (
             <div className="container-fluid">
                 <div className="col-12">
@@ -71,46 +70,44 @@ class Home extends Component{
                             Login to access the <b>DiPandu CRM</b>
                             </p>
                             <div className="login-box">
-                            <form>
                                 <div className="form-row">
-                                <div className="form-group w-100 floating-label">
-                                    <label>Email</label>
-                                    <input
-                                    type="email"
-                                    className="form-control"
-                                    placeholder="Email"
-                                    name="email"
-                                    value={this.state.email}
-                                    onChange={(e) => this.handleChange(e)}
-                                    />
+                                    <div className="form-group w-100 floating-label">
+                                        <label>Email</label>
+                                        <input
+                                        type="email"
+                                        className="form-control"
+                                        placeholder="Email"
+                                        name="email"
+                                        value={this.state.email}
+                                        onChange={(e) => this.handleChange(e)}
+                                        />
+                                    </div>
+                                    <div className="form-group w-100 floating-label">
+                                        <label>Password</label>
+                                        <input
+                                        type="password"
+                                        className="form-control m-b-10"
+                                        placeholder="Password"
+                                        name="password"
+                                        value={this.state.password}
+                                        onChange={(e) => this.handleChange(e)}
+                                        />
+                                        <Link to='/forgot' className='text-underline'>
+                                            Forgot Password?
+                                        </Link>
+                                    </div>
+                                    <div className="form-group w-100 mb-0">
+                                        <button
+                                        type="submit"
+                                        className="btn btn-primary btn-block btn-lg"
+                                        onSubmit={(e) => this.handleLogin(e)} disabled={this.state.isLoading ? true : false}
+                                        >
+                                            {
+                                                this.state.isLoading ? <div className="spinner-border text-secondary" role="status"><span className="sr-only">Loading...</span></div> : 'Login'
+                                            }
+                                        </button>
+                                    </div>
                                 </div>
-                                <div className="form-group w-100 floating-label">
-                                    <label>Password</label>
-                                    <input
-                                    type="password"
-                                    className="form-control m-b-5"
-                                    placeholder="Password"
-                                    name="password"
-                                    value={this.state.password}
-                                    onChange={(e) => this.handleChange(e)}
-                                    />
-                                    <a href="/#" className="text-underline">
-                                        Forgot Password?
-                                    </a>
-                                </div>
-                                <div className="form-group w-100 mb-0">
-                                    <button
-                                    type="submit"
-                                    className="btn btn-primary btn-block btn-lg"
-                                    onClick={(e) => this.handleLogin(e)} disabled={this.state.isLoading ? true : false}
-                                    >
-                                        {
-                                            this.state.isLoading ? <div class="spinner-border text-secondary" role="status"><span class="sr-only">Loading...</span></div> : 'Login'
-                                        }
-                                    </button>
-                                </div>
-                                </div>
-                            </form>
                             </div>
                             <div className="w-100 text-center mt-4">
                             <Link className='text-underline' to='/register'>Create new account</Link>

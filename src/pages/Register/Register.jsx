@@ -81,14 +81,13 @@ class Home extends Component{
                             Boost your team productivity with <b>DiPandu CRM</b>
                             </p>
                             <div className="login-box">
-                            <form>
                                 {this.state.isRegisterSuccess ? <div className='row m-b-5'>
                                     <div className='col-12'>
-                                        <div class='alert alert-success' role='alert'>
-                                            <h4 class='alert-heading'>Well done!</h4>
+                                        <div className='alert alert-success' role='alert'>
+                                            <h4 className='alert-heading'>Well done!</h4>
                                             <p>Aww yeah, you successfully signed up to our services. Please check your email inbox to activate your account.</p>
                                             <hr />
-                                            <p class='mb-0'>You won't be able to use our service before activating your account.</p>
+                                            <p className='mb-0'>You won't be able to use our service before activating your account.</p>
                                         </div>
                                     </div>
                                 </div> : ''}
@@ -175,13 +174,13 @@ class Home extends Component{
                                     <div className='form-group col-12 floating-label'>
                                         <label>Team Size</label>
                                         <select className='form-control' name='employee_number' onChange={(e) => this.handleChange(e)}>
-                                            <option selected={this.state.employee_number? false : true} disabled>Team Size</option>
-                                            <option selected={this.state.employee_number === '1' ? true : false} value='1'>1</option>
-                                            <option selected={this.state.employee_number === '2-5' ? true : false} value='2-5'>2 - 5</option>
-                                            <option selected={this.state.employee_number === '6-25' ? true : false} value='6-25'>6 - 25</option>
-                                            <option selected={this.state.employee_number === '25-50' ? true : false} value='25-50'>25 - 50</option>
-                                            <option selected={this.state.employee_number === '50-100' ? true : false} value='50-100'>51 - 100</option>
-                                            <option selected={this.state.employee_number === '100' ? true : false} value='100'>More than 100</option>
+                                            <option defaultValue={this.state.employee_number? false : true}>Team Size</option>
+                                            <option defaultValue={this.state.employee_number === '1' ? true : false} value='1'>1</option>
+                                            <option defaultValue={this.state.employee_number === '2-5' ? true : false} value='2-5'>2 - 5</option>
+                                            <option defaultValue={this.state.employee_number === '6-25' ? true : false} value='6-25'>6 - 25</option>
+                                            <option defaultValue={this.state.employee_number === '25-50' ? true : false} value='25-50'>25 - 50</option>
+                                            <option defaultValue={this.state.employee_number === '50-100' ? true : false} value='50-100'>51 - 100</option>
+                                            <option defaultValue={this.state.employee_number === '100' ? true : false} value='100'>More than 100</option>
                                         </select>
                                     </div>
                                 </div>
@@ -193,12 +192,11 @@ class Home extends Component{
                                         onClick={(e) => this.handleLogin(e)} disabled={this.state.isLoading ? true : false}
                                         >
                                             {
-                                                this.state.isLoading ? <div class='spinner-border text-secondary' role='status'><span class='sr-only'>Loading...</span></div> : 'Sign Up'
+                                                this.state.isLoading ? <div className='spinner-border text-secondary' role='status'><span className='sr-only'>Loading...</span></div> : 'Sign Up'
                                             }
                                         </button>
                                     </div>
                                 </div>
-                            </form>
                             </div>
                             <div className='w-100 text-center mt-4'>
                             Already have an account? <Link className='text-underline' to='/login'>Sign In</Link>

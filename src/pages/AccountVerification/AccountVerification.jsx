@@ -45,8 +45,6 @@ class AccountVerification extends Component {
         });
     }
 
-
-
     render() {
         if(this.state.isLoading){
             return (
@@ -56,8 +54,8 @@ class AccountVerification extends Component {
                             <div className='row align-items-center m-h-100'>
                                 <div className='col-12 col-sm-8 col-md-8 col-lg-7 col-xl-5 mx-auto text-light text-center'>
                                     <div className='w-100 m-t-15'>
-                                        <div class='spinner-border text-light m-b-20' role='status'>
-                                            <span class='sr-only'>Loading...</span>
+                                        <div className='spinner-border text-light m-b-20' role='status'>
+                                            <span className='sr-only'>Loading...</span>
                                         </div>
                                         <h5>Please wait ...</h5>
                                     </div>

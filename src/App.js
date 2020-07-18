@@ -11,6 +11,8 @@ import Login from './pages/Login/Login';
 import Home from './pages/Home';
 import Register from './pages/Register/Register';
 import AccountVerification from './pages/AccountVerification/AccountVerification';
+import ForgotPassword from './pages/ForgotPassword/Forgot';
+import ResetPasswordPublic from './pages/ResetPassword-Public/ResetPasswordPublic';
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
                 <PublicRoute exact path='/login' component={Login} isAuthenticated={isAuthenticated} />
                 <PublicRoute exact path='/register' component={Register} isAuthenticated={isAuthenticated} />
                 <PublicRoute exact path='/verify' component={AccountVerification} isAuthenticated={isAuthenticated} />
+                <PublicRoute exact path='/forgot' component={ForgotPassword} isAuthenticated={isAuthenticated} />
+                <PublicRoute exact path='/reset' component={ResetPasswordPublic} isAuthenticated={isAuthenticated} />
                 <PrivateRoute exact path='/dashboard' component={Home}  isAuthenticated={isAuthenticated} />
                 <Redirect to={isAuthenticated ? '/dashboard' : '/login'} />
             </Switch>
