@@ -44,3 +44,14 @@ export const logoutService = async () => {
         };
     }
 }
+
+export const verifyToken = async () => {
+    try{
+        return await axios.post(`${API_URL}/verify-token`);
+    }catch(err){
+        return {
+            error: true,
+            response: err.response
+        };
+    }
+}

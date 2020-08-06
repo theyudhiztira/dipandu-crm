@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import {
     BrowserRouter as Router,
@@ -8,14 +8,28 @@ import {
 import PublicRoute from './routes/PublicRoutes';
 import PrivateRoute from './routes/PrivateRoutes';
 import Login from './pages/Login/Login';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import Register from './pages/Register/Register';
 import AccountVerification from './pages/AccountVerification/AccountVerification';
 import ForgotPassword from './pages/ForgotPassword/Forgot';
 import ResetPasswordPublic from './pages/ResetPassword-Public/ResetPasswordPublic';
+import { verifyToken } from './services/authServices';
 
 
 function App() {
+
+    // verify token on app load
+    useEffect(() => {
+        const tokenValidity = async () => {
+            const checkToken = await verifyToken();
+            if (checkToken.error) {
+                localStorage.removeItem('token');
+            }
+        }
+
+        tokenValidity();
+    }, []);
+    
     const auth = useSelector(state => state.auth);
     const { isAuthenticated } = auth;
 
